@@ -1,0 +1,113 @@
+<Label>
+    background_color:(1,1,1,1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<design>
+
+    canvas.before:
+        Color:
+            rgba:(173/255, 173/255, 173/255, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+    FloatLayout
+        size: root.width, root.height
+
+
+
+        #Detection Camera Background 
+        Label:
+            background_color:(117/255, 118/255, 120/255,1)
+            size_hint:(None, None)
+            width: 880
+            height:690
+            pos_hint:{'x':.08, 'y':.25}
+
+
+        #Detection Camera Background 
+        Label:
+            background_color:(37/255, 37/255, 37/255,1)
+            size_hint:(None, None)
+            width: 840
+            height:650
+            pos_hint:{'x':.09, 'y':.27}
+
+        #Detection Camera
+        # Camera:
+        #     id: detection
+        #     size_hint:(None, None)
+        #     resolution: (800,1200)
+        #     play:True
+        #     width: 800
+        #     height:800
+        #     pos_hint:{'x':.10,'y':.20}
+            
+        
+
+        #Detection result Background
+        Label:
+            background_color:(117/255, 118/255, 120/255,1)
+            color: (1,0,0,1)
+            size_hint:(None, None)
+            width: 580
+            height:795
+            pos_hint:{'x':.63, 'y':.18}
+
+        #Detection result image Background
+        Label:
+            background_color:(37/255, 37/255, 37/255,1)# 37, 38
+            color: (1,0,0,1)
+            size_hint:(None, None)
+            width: 540
+            height:690
+            pos_hint:{'x':.64, 'y':.26}
+
+
+        # Image:
+        #     id: img
+        #     source: ""
+        #     size_hint:(None, None)
+        #     width: 500
+        #     height:650
+        #     pos_hint:{'x':.65, 'y':.28}
+
+        #Detection result Text
+        # Label:
+        #     background_color:(188/255, 190/255, 194/255,1)
+        #     id: dets
+        #     text:'Clear'
+        #     color: (1,0,0,1)
+        #     size_hint:(None, None)
+        #     width: 500
+        #     height:50
+        #     pos_hint:{'x':.65, 'y':.20}
+
+        
+        
+               
+    #Start Button
+        # Button:
+        #     text:'Start'
+        #     size_hint: (None, None)
+        #     width: 150
+        #     height:50
+        #     pos_hint:{'x':.46, 'y':.05}
+        #     on_press: root.detects()
+
+# BoxLayout:
+#         orientation: 'horizontal'
+
+#         KivyCamera:
+#             capture: 'myvalue'
+#             pos_hint: {'left': 1}
+
+#         KivyCamera:
+#             capture: 'anothervalue'
+#             pos_hint: {'right': 1}

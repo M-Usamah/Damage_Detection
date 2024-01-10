@@ -1,0 +1,166 @@
+<Label>
+    background_color:(232/255, 218/255, 214/255,1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    size_hint_y:1
+    size_hint_x:1
+
+<Button>
+    size_hint_y:None
+    size_hint_x:.5
+    height: 50
+    width: 200
+
+
+
+<Detection_Layout>
+    canvas.before:
+        Color:
+            rgba:(232/255, 218/255, 214/255,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    GridLayout:
+        size: root.width, root.height
+        cols:1
+
+        #border line
+        Label:
+            text:'Welcome'
+            height:10
+            size_hint_y:None
+            height:40
+            background_color:(192/255, 193/255, 194/255,1)
+
+        GridLayout:
+            rows:1
+            # spacing:30
+            Label:
+                text:'hi'
+                size_hint_x:None
+                width:10
+                # background_color:(1,.5,0,1)
+
+            GridLayout:
+                cols:1
+                # spacing:30
+                #border line
+                Label:
+                    text:'hello'
+                    size_hint_y:None
+                    height:80
+                    # background_color:(0,1,1,1)
+
+                # Detection Layout
+                GridLayout:
+                    rows:1
+                    Label:
+                        text:'hi'
+                        size_hint_x:None
+                        width:90
+                        # background_color:(0,1,1,1)
+                    GridLayout:
+                        cols:3
+                        #Camera
+                        GridLayout:
+                            cols:1
+                            #Above Camera
+                            # Camera:
+                            #     index: 2
+                            #     id:above_cam
+                            #     resolution:(500,1000)
+                            #     play: True
+
+                            Image:
+                                id:above_cam
+                                    
+                            Label:
+                                text:'hello'
+                                size_hint_y:None
+                                height:10
+                            #Right Left Camera
+                            GridLayout:
+                                cols:3
+                                Image:
+                                    index: 0
+                                    id:right_cam
+                                    
+                                    resolution:(1000,500)
+                                    play: True
+                                Label:
+                                    text:'hi'
+                                    size_hint_x:None
+                                    width:10
+                                Image:
+                                    id:left_cam
+                                    index: 0
+                                    resolution:(500,500)
+                                    # Play: True
+                        Label:
+                            text:'hi'
+                            size_hint_x:None
+                            width:10
+                            background_color:(0,1,0,1)
+                        GridLayout:
+                            cols:1
+                            #Images
+                            Image:
+                                id:img
+                                source:'Testing/image/20221225_172516.png'
+
+                            Label:
+                                text:'hello'
+                                size_hint_y:None
+                                height:10
+                                # background_color:(0,1,0,1)
+
+                            #Result_Text
+                            Label:
+                                text:"Working"
+                                size_hint_y:None
+                                height:30
+                                background_color:(0,0,0,1)
+                    Label:
+                        text:'hi'
+                        size_hint_x:None
+                        width:90
+                        # background_color:(0,1,1,1)       
+                # Horizontal Boderline
+                Label:
+                    text:'hello'
+                    size_hint_y:None
+                    height:30
+                    # background_color:(1,1,0,1)
+                #Buttons
+                GridLayout:
+                    rows:1
+                    Button:
+                        text:'Picture'
+                    Button:
+                        text:'Picture'
+                    Button:
+                        text:'Picture'
+                    Button:
+                        text:'Picture'
+                # Horizontal Boderline
+                Label:
+                    text:'hello'
+                    height:20
+                    size_hint_y:None
+                    height:30
+                    # background_color:(1,1,0,1)
+            # Vertical Boderline
+            Label:
+                text:'hi'
+                size_hint_x:None
+                width:10
+                # background_color:(1,.5,0,1)
+        Label:
+            text:'Welcome'
+            size_hint_y:None
+            height:40
+            background_color:(192/255, 193/255, 194/255,1)

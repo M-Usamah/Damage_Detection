@@ -1,0 +1,40 @@
+<Button>
+    size_hint:(None,None)
+    height:52
+    width:150
+
+
+<detection_layout>
+    FloatLayout:
+        size: root.width, root.height
+
+        KivyCamera:
+            id: above_cam
+            size_hint:(None,None)
+            height:200
+            width:1015
+            pos_hint:{'x': 10/100,'y': 56/100}
+
+
+        KivyCamera:
+            id: right_cam
+            size_hint:(None,None)
+            height:300
+            width:500
+            pos_hint:{'x': 10/100,'y': 25/100}
+
+        KivyCamera:
+            id: left_cam
+            size_hint:(None,None)
+            height:300
+            width:500
+            pos_hint:{'x': 37/100,'y': 25/100}
+
+        Button:
+            text:'Start'
+            on_press: root.dostart()
+            pos_hint:{'x': 26/100,'y': 15/100}
+
+        Button:
+            text:'Stop'
+            pos_hint:{'x': 46/100,'y': 15/100}

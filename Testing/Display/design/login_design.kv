@@ -1,0 +1,62 @@
+<TextInput>
+
+    background_color: ''
+    background_color: (150/255,150/255,150/255,1)
+
+
+<Login_Logic>
+    
+
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+        
+        GridLayout:
+            cols: 2
+            padding:10
+            Label:
+                text: "Name"
+                font_size: 20
+                text_size: self.size
+                halign: 'right'
+                valign: 'middle'
+            TextInput:
+                id: user_name
+                multiline:False
+                #size_hint: self.size
+                height: 50
+            Label:
+                text: "Password"
+                font_size: 20
+                text_size: self.size
+                halign: 'right'
+                valign: 'middle'
+            TextInput:
+                id: password
+                multiline:False
+
+        BoxLayout:
+            orientation:'vertical'
+            Button:
+                text: "Log In"
+                on_press: root.press()
+                font_size: 19
+                background_color: ' '
+                background_color: (1,0,0,0.5)
+                pos_hint:{'center_x':0.5}
+                size_hint:(0,0)
+                width: 200
+                height: 50
+            
+        Image:
+            id: name_label    
+        
+
+        GridLayout:
+            cols: 2
+        
+            Label:
+                text: "LogiGates"
+
+            Label:
+                text: "Image"
